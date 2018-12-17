@@ -33,7 +33,7 @@ entrust_sn:订单号
 | 参数名	        | 参数类型	    |  必填  | 描述 |
 | ------------- |:-------------:| :-----: |:-----:  |
 | api_key    	  | String		    |   是   |   用户申请的api_key        |
-| symbol       	| String        |   是   |   交易对类型（GTB_ETH）    |
+| symbol       	| String        |   是   |   交易对类型（EOS_ETH）    |
 | trade_type  	| String   	    |   是   |   交易类型（1买入，2卖出）  |
 | price		 	    | Double        |  	 是   |   下单价格                 |
 | num 		    	| Double 	      |   是   |   下单数量                 |
@@ -96,7 +96,7 @@ data:委托结果,结果顺序和下单参数data顺序一致,code：返回状�
 | 参数名	        | 参数类型	    |  必填  | 描述 |
 | ------------- |:-------------:| :-----: |:-----:  |
 | api_key    	  | String		    |   是   |   用户申请的api_key        |
-| data    	  | String		    |   是   |最大量50条,值必须是json格式字符串, 例"[{"symbol":"ETH_BTC","trade_type":1,"price":"1.23","num":"2"}]",symbol交易对类型（GTB_ETH）,trade_type 交易类型（1买入，2卖出）,price下单价格,num下单数量|
+| data    	  | String		    |   是   |最大量50条,值必须是json格式字符串, 例"[{"symbol":"ETH_BTC","trade_type":1,"price":"1.23","num":"2"}]",symbol交易对类型（EOS_ETH）,trade_type 交易类型（1买入，2卖出）,price下单价格,num下单数量|
 | nonce		    	| String   	  	|   是   |   18位随机数               |
 | sign   	| String   	    |   是   |   请求参数的签名            |
 
@@ -183,7 +183,7 @@ symbol：委托交易对
 | ------------- |:-------------:| :-----: |:-----:  |
 | api_key    	  | String		    |   是   |   用户申请的api_key        |
 | page       	| Integer        |   是   |   当前页数    |
-| symbol		    	| String   	  	|   否   |   交易对类型，默认所有，可以指定（GTB_ETH）               |
+| symbol		    	| String   	  	|   否   |   交易对类型，默认所有，可以指定（EOS_ETH）               |
 | limit   	| Integer   	    |   否   |   指定获取数据的条数（默认10条，最大500条）            |
 | nonce   	| String   	    |   是   |   18位随机数            |
 | sign   	| String   	    |   是   |   请求参数的签名            |
@@ -283,7 +283,7 @@ symbol：委托交易对
 | ------------- |:-------------:| :-----: |:-----:  |
 | api_key    	  | String		    |   是   |   用户申请的api_key        |
 | page       	| Integer        |   是   |   当前页数    |
-| symbol		    	| String   	  	|   否   |   交易对类型，默认所有，可以指定（GTB_ETH）               |
+| symbol		    	| String   	  	|   否   |   交易对类型，默认所有，可以指定（EOS_ETH）               |
 | limit   	| Integer   	    |   否   |   指定获取数据的条数（默认10条，最大500条）            |
 | nonce   	| String   	    |   是   |   18位随机数            |
 | sign   	| String   	    |   是   |   请求参数的签名            |
@@ -328,7 +328,7 @@ date:当前时间戳
 | 参数名	        | 参数类型	    |  必填  | 描述 |
 | ------------- |:-------------:| :-----: |:-----:  |
 | api_key    	  | String		    |   是   |   用户申请的api_key        |
-| symbol		    	| String   	  	|   是   |   交易对类型，如指定（GTB_ETH）               |
+| symbol		    	| String   	  	|   是   |   交易对类型，如指定（EOS_ETH）               |
 
 　9.POST /market/trade/kline 查询K线数据（访问频率 10次/2秒）<br>
     URL `https://api.coincax.com/market/trade/kline`<br>
@@ -367,7 +367,7 @@ date:当前时间戳
 | 参数名	        | 参数类型	    |  必填  | 描述 |
 | ------------- |:-------------:| :-----: |:-----:  |
 | api_key    	  | String		    |   是   |   用户申请的api_key        |
-| symbol		    	| String   	  	|   是   |   交易对类型，如指定（GTB_ETH）               |
+| symbol		    	| String   	  	|   是   |   交易对类型，如指定（EOS_ETH）               |
 | size		    	| Integer   	 |   否  |   指定获取数据的条数  （默认500条，最大500条）              |
 | type		    	| String   	 |   否   |   K线时间类型 （1m: 1分钟，1h：1小时，1d：1天，1w：1周，1M：1月）  (默认1d)          |
 
